@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Blog 6th</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+
+</head>
+
+<body>
+<nav class="navbar is-danger">
+    <nav class="navbar-brand">
+        <a href="/" class="navbar-item">
+            <strong>プログラミングチュートリアル</strong>
+        </a>
+    </nav>
+</nav>
+<section>
+    <div class="container">{% block content %}{% endblock %}</div>
+</section>
+</body>
+</html>
