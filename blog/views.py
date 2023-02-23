@@ -8,3 +8,6 @@ def frontpage(request):
     return render(request,'blog/frontpage.html',{'posts':posts})
 # Create your views here.
 
+def post_detail(request,slug):
+    post=Post.objects.get(slug=slug)
+    return render(request,'blog/post_detail.html',{'post':post})
