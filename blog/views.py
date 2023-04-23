@@ -1,11 +1,14 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render, redirect
-
 from blog.forms import CommentForm
 from blog.models import Post
 
 
 def frontpage(request):
     posts=Post.objects.all()
+    paginator=Paginator(posts,10)
+    page=request.GET.get('page')
+    posts=paginator.get_page(page)
 
     return render(request,'blog/frontpage.html',{'posts':posts})
 # Create your views here.

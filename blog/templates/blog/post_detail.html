@@ -5,6 +5,10 @@
     <small>Posted at {{ post.posted_date }}</small>
     <p>{{ post.intro }}</p>
     <p>{{ post.body }}</p>
+        {% for tag in post.tags.all %}
+
+   <li>{{ tag.name }}</li>
+    {% endfor %}
     <hr />
     <!--コメントされたものを表示-->
         <h2 class="subtitle">コメント</h2>
